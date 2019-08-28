@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns="urn:infinispan:config:9.4">
+    <cache-container>
+        <jmx domain="infinispan.embedded.springreboot"/>
+        <local-cache name="cache1" statistics="true">
+        	<memory>
+		    	<object size="12345" />
+		    </memory>
+		    <expiration lifespan="60000"/>
+      	</local-cache>
+    </cache-container>
+</infinispan>

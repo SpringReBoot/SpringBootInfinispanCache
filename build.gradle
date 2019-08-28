@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'eclipse'
+}
+
+group = 'com.springreboot.cache'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+configurations {
+	compile.exclude group:'org.jboss.slf4j'
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.infinispan:infinispan-spring-boot-starter-embedded:2.1.7.Final'
+	
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
