@@ -2,3 +2,7 @@
 infinispan.embedded.config-xml: infinispan.xml
      
 #debug: true
+
+#spring:
+#  cache:
+#    type: infinispan
